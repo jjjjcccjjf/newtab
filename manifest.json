@@ -1,0 +1,9 @@
+{
+ 	"manifest_version": 2,
+ 	"name": "Year progress",
+ 	"version": "1.0",
+	"description": "By Enzo",
+  	"chrome_url_overrides" : {
+    	"newtab": "index.html"
+  	}
+}
