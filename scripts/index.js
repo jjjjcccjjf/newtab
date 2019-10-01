@@ -44,10 +44,17 @@ $(document).ready(function() {
 	    var dayy = Math.abs(((dayyy / 24) * 100) - 100).toFixed(2);
 
 
+	    int_d = new Date(2008, 11+1,1);
+		d_last = new Date(int_d - 1);
+	 
+	    var monat_perc = Math.abs((today.getDate() / d_last.getDate()) * 100).toFixed(2);
+
 	    $('#timenow').text(moment().format('MMM D, YYYY h:mm:ss a'));
 	    $('#proggy').text(progress);
 	    $('#proggy2').text(day_progress);
 	    $('#dayy').text(dayy);
+	    $('#monat').text(moment().format('MMMM'))
+	    $('#monat_perc').text(monat_perc)
 
 	}, 1000);
 	
