@@ -1,4 +1,4 @@
-html {
+/*html {
   background-image: linear-gradient(to right top, #67b771, #61bb6c, #5abf67, #53c261, #4bc65b);
   height: 100vh;
   overflow:hidden;
@@ -9,7 +9,7 @@ html {
   left: 50%;
   margin-left: -64.5px;
   margin-top: -85.5px;
-}
+}*/
 .ghost {
   animation: float 3s ease-out infinite;
 }
@@ -23,7 +23,6 @@ html {
   margin-top: 15px;
 }
 .shadow {
-
   animation: shrink 3s ease-out infinite;
   transform-origin: center center;
 }
@@ -45,7 +44,7 @@ html {
   }
 }
 
-.year-prog {
+/*.year-prog {
     margin: 0 auto;
     position: relative;
     font-size: 3.1em;
@@ -62,6 +61,8 @@ html {
 	font-size: .6em;
 }
 
+
 span {
   text-shadow: 1px 1px 1px #000000;
 }
+*/

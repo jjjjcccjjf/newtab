@@ -49,14 +49,44 @@ $(document).ready(function() {
 	 
 	    var monat_perc = Math.abs((today.getDate() / d_last.getDate()) * 100).toFixed(2);
 
+	    $('#name').text('endan'); //set your name here
+
 	    $('#timenow').text(moment().format('MMM D, YYYY h:mm:ss a'));
-	    $('#proggy').text(progress);
+	    $('.proggy').text(progress + "%");
 	    $('#proggy2').text(day_progress);
 	    $('#dayy').text(dayy);
 	    $('#monat').text(moment().format('MMMM'))
 	    $('#monat_perc').text(monat_perc)
+	    let proggy_bar_class =("w-" + Math.round(progress)).toString()
+	    $('#proggy-bar').addClass(proggy_bar_class)
+	    
+	    let images_arr = ['1.png', '2.png', '3.png', '4.png', '5.png', 
+	    '7.png', '8.png', '9.png', '10.png',
+	    '11.png', '12.png', '13.png', '14.png', '15.png',
+	    '16.png', '17.png', '1.gif']
+	    images_arr = shuffle(images_arr)
+	    $('#imgy').attr('src', 'images/' + images_arr[0])
 
 	}, 1000);
 	
 
 });
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
